@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Box </title>
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+     html, body {
+      height: 100%;
+    }
+
+
+    body {
+      background-color:yellow;
+      font-family: Arial, sans-serif;
+    } 
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+      background-color: yellow;
+     
+    }
+
+    .row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      padding: 15px;
+    
+      color: #fff;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .red { background-color: red; }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+    .cyan { background-color: cyan; color: black; }
+    .magenta { background-color: magenta; }
+    .purple { background-color: purple; }
+    .black { background-color: #111; }
+    .white { background-color: white; color: black; }
+    .dark-green { background-color: darkgreen; }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      
+    }
+     @media (max-width: 600px) {
+      .row {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .box {
+        min-width: 0;
+        width: 100%;
+        padding: 10px;
+      }
+      .container {
+        padding: 5px;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Top Red Box -->
+    <div class="row">
+      <div class="box red">
+        <div class="box dark-green">
+        <div class="form-group">
+          <label></label>
+          <input type="text" placeholder="Enter your name">
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Row -->
+    <div class="row">
+
+      <!-- Left Cyan Box -->
+      <div class="box cyan">
+        <div class="box dark-green">
+          <div class="form-group">
+           <label></label>
+            <input type="email" placeholder="Enter email">
+            <label></label>
+            <input type="email" placeholder="Enter email">
+          </div>
+        </div>
+        <div class="box dark-green" style="margin-top: 10px;">
+          <div class="form-group">
+            <label></label>
+            <input type="text" placeholder="Enter phone number">
+             <label></label>
+            <input type="text" placeholder="Enter phone number">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Blue Box -->
+      <div class="box blue">
+        <div class="box white">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" placeholder="Enter username" style="background-color: darkgreen;">
+          </div>
+        </div>
+        <div class="box dark-green" style="margin-top: 10px;">
+          <div class="form-group">
+            <label></label>
+            <input type="text" placeholder="Enter password">
+             <label></label>
+            <input type="text" placeholder="Enter password">
+          </div>
+        </div>
+        <div class="box magenta" style="margin-top: 10px;">
+          <div class="form-group">
+            <label></label>
+            <input type="text" placeholder="Enter address">
+          </div>
+          <div class="form-group">
+            <label></label>
+            <input type="text" placeholder="Enter city">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Red Box -->
+    <div class="row">
+      <div class="box red">
+        <div class="form-group">
+          <label></label>
+          <input type="text" placeholder="Any additional notes">
+          <label></label>
+          <input type="text" placeholder="Any additional notes">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
