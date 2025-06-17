@@ -1,0 +1,84 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+     html, body {
+      height: 100%;
+    }
+
+
+    body {
+      background-color:yellow;
+      font-family: Arial, sans-serif;
+    } 
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+      background-color: yellow;
+     
+    }
+
+    .row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      padding: 15px;
+    
+      color: #fff;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .red { background-color: red; }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+    .cyan { background-color: cyan; color: black; }
+    .magenta { background-color: magenta; }
+    .purple { background-color: purple; }
+    .black { background-color: #111; }
+    .white { background-color: white; color: black; }
+    .dark-green { background-color: darkgreen; }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      
+    }
+     @media (max-width: 600px) {
+      .row {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .box {
+        min-width: 0;
+        width: 100%;
+        padding: 10px;
+      }
+      .container {
+        padding: 5px;
+        gap: 10px;
+      }
+    }
